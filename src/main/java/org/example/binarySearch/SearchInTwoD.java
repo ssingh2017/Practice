@@ -1,4 +1,4 @@
-package org.example.questions;
+package org.example.binarySearch;
 
 public class SearchInTwoD {
     public static void main(String args[]){
