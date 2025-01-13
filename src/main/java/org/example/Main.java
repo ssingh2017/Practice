@@ -1,21 +1,21 @@
 package org.example;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         // Define an array of lists
-        int a =  ' ';
-        char z = 96;
-        char x ='a';
-        char y = 'A';
-       char l = Character.toLowerCase(y);
-        if(x == l)
-            System.out.println("equals ");
-        System.out.println("value "+a);
-        System.out.println("value "+z);
-        //A- 65  Z - 90
-        //a- 97  z - 122
-        //0 - 48 9 - 57
+        LinkedHashMap<Integer,Integer> map = new LinkedHashMap<>(2);
+        map.put(1,10);
+        map.put(2,20);
+        map.put(5,5);
+        System.out.println("map 1 "+map);
+        map.get(1);
+        map.putLast(1,10);
+//        map.remove(1);
+//        map.put(1,10);
+        System.out.println("map 2 "+map);
     }
 }
