@@ -13,7 +13,7 @@ public class ThreeSumsToZero {
         List<List<Integer>> listOfLists = new ArrayList<>();
 
         Arrays.sort(nums);  // nlogn
-        for(int i=0;i<nums.length;i++){
+        for(int i=0;i<nums.length;i++){   //0(n^2)
             int start = i+1;
             int end = nums.length-1;
             int x = nums[i];

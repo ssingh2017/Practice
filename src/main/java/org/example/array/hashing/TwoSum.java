@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class TwoSum {
     public static void main(String [] args){
         int nums [] =new int[]{3,4,5,6};
-        int target = 15;
+        int target = 11;
         int num [] = twoSum(nums,target);
         for(int i : num){
             System.out.print(i +" ");

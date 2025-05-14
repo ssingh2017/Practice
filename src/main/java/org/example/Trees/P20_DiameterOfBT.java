@@ -5,6 +5,8 @@ public class P20_DiameterOfBT {
         TreeNode node = TreeNode.getLeftTree();
         System.out.println("diameter of tree "+diameterOfBT(node));
     }
+
+    // incorrect solution
     public static int diameterOfBT(TreeNode node) {
         if (node == null)
             return 0;

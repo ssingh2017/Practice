@@ -3,7 +3,7 @@ package org.example.linkedList;
 public class AddTwoNumbers {
     public static void main(String[] args){
         ListNode l1 = new ListNode(9);
-        l1.next = new ListNode(9);
+//        l1.next = new ListNode(9);
 //        l1.next.next = new ListNode(4);
 
         ListNode l2 = new ListNode(9);

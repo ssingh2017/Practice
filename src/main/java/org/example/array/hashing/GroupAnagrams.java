@@ -1,17 +1,18 @@
 package org.example.array.hashing;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class GroupAnagrams {
     public static void main(String [] args){
-        //String [] strs = new String[]{"act","pots","tops","cat","stop","hat"};
-        String [] strs = new String[]{"","",""};
+        String [] strs = new String[]{"act","pots","tops","cat","stop","hat"};
+        //String [] strs = new String[]{"","",""};
         System.out.println("output "+groupAnagrams(strs));
-
+        System.out.println("outpu 2 "+groupAnagrams2(strs));
 
 
     }
+
+    // my solution.
     public static List<List<String>> groupAnagrams(String [] strs){
         List<List<String>> res = new ArrayList<>();
         List<String> traversedString = new ArrayList<>();
@@ -56,5 +57,31 @@ public class GroupAnagrams {
                 charCount[charAscii]--;
         }
         return true;
+    }
+
+
+    // NeetCode solution
+    //Time complexity - O(mn)  --- m - no. of Strings and n- avg length of string.
+    public static List<List<String>> groupAnagrams2(String [] strs){
+        HashMap<String,List<String>> map = new HashMap<>();
+        for(String str : strs){
+            int [] intCount = new int [26];
+            for(char c : str.toCharArray()){
+                intCount[c - 'a']++;
+            }
+
+            String key = Arrays.toString(intCount);   //
+
+            List<String> stringList = new ArrayList<>();
+           if(map.containsKey(key)){
+               stringList = map.get(key);
+               stringList.add(str);
+               map.put(key,stringList);
+           }else{
+               stringList.add(str);
+               map.put(key,stringList);
+           }
+        }
+        return new ArrayList<>(map.values());
     }
 }

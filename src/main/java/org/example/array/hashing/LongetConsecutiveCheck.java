@@ -60,8 +60,6 @@ public class LongetConsecutiveCheck {
             if(counter>maxCounter)
                 maxCounter =counter;
         }
-
-
         return maxCounter;
     }
 }

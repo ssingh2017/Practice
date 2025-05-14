@@ -5,10 +5,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+
+//Longest Substring Without Repeating Characters
+
 public class LengthOfLongestSubstring {
     public static void main(String [] args){
         System.out.println("Longest substring length "+lengthOfLongestSubstring("abcabcbb"));
-        System.out.println("Longest substring length "+lengthOfLongestSubStringUsingSet("bbbb"));
+        System.out.println("Longest substring length "+lengthOfLongestSubStringUsingSet("abcabcbb"));
     }
 
     public static int lengthOfLongestSubstring(String s){
@@ -33,6 +36,7 @@ public class LengthOfLongestSubstring {
         return k;
     }
 
+    // neetcode solution.
     public static int lengthOfLongestSubStringUsingSet(String s){
         Set<Character> set = new HashSet<>();
         int start = 0;
