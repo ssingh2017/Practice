@@ -42,7 +42,7 @@ public class TreeNode {
           node.right = new TreeNode(3);
           node.left.left = new TreeNode(4);
           node.left.right = new TreeNode(5);
-         // node.right.left = new TreeNode(7);
+          node.right.left = new TreeNode(7);
           return node;
       }
 
