@@ -42,9 +42,19 @@ public class TreeNode {
           node.right = new TreeNode(3);
           node.left.left = new TreeNode(4);
           node.left.right = new TreeNode(5);
-          node.right.left = new TreeNode(7);
+          //node.right.left = new TreeNode(7);
           return node;
       }
+
+    public static TreeNode getTree3(){
+        TreeNode node = new TreeNode(1);
+        node.left = new TreeNode(3);
+        node.right = new TreeNode(2);
+        node.left.left = new TreeNode(5);
+        node.left.right = new TreeNode(4);
+        //node.right.left = new TreeNode(7);
+        return node;
+    }
 
     public static TreeNode subTree(){
         TreeNode node = new TreeNode(2);

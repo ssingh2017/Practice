@@ -17,5 +17,14 @@ public class Main {
 //        map.remove(1);
 //        map.put(1,10);
         System.out.println("map 2 "+map);
+
+        System.out.println("output: "+fact(5));
+    }
+
+    public static int fact(int n){
+        if(n==1)
+            return 1;
+
+        return n*fact(n-1);
     }
 }
