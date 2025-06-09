@@ -10,13 +10,10 @@ public class ReverseStackByRecursion {
         stack.push(3);
         stack.push(2);
         stack.push(1);
-
         while (!stack.isEmpty()){
             System.out.print(stack.pop()+" ");
         }
-
     }
-
     private static void reverseStack(Stack<Integer> stack){
         if(stack.isEmpty())
              return;
@@ -25,7 +22,6 @@ public class ReverseStackByRecursion {
         reverseStack(stack);
         insertToStack(stack,temp);
     }
-
     private static void insertToStack(Stack<Integer> stack, int temp){
         if(stack.isEmpty()){
             stack.push(temp);
@@ -34,6 +30,5 @@ public class ReverseStackByRecursion {
         int val = stack.pop();
         insertToStack(stack,temp);
         stack.push(val);
-
     }
 }

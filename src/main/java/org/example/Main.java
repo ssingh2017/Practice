@@ -7,16 +7,13 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
        String s = "abc";
-//       int a = char(s.charAt(0)-32);
-       //char z = (char) a;
-       String x = "";
-      //  System.out.println("a "+z);
+       int x =7;
+        System.out.println( fact(x));
+        System.out.println(x);
     }
 
     public static int fact(int n){
-        if(n==1)
-            return 1;
-
-        return n*fact(n-1);
+       n=10;
+       return n;
     }
 }

@@ -27,11 +27,11 @@ public class TreeNode {
       public static TreeNode getSkewTree(){
           TreeNode node = new TreeNode(1);
           node.left = new TreeNode(2);
-         // node.right = new TreeNode(2);
-//          node.left.left = new TreeNode(3);
-//          node.left.left.left = new TreeNode(7);
-//          node.left.left.right = new TreeNode(4);
-//          node.left.left.right.right = new  TreeNode(5);
+          node.right = new TreeNode(2);
+          node.left.left = new TreeNode(3);
+          node.left.left.left = new TreeNode(7);
+          node.left.left.right = new TreeNode(4);
+          node.left.left.right.right = new  TreeNode(5);
 
           return node;
       }
@@ -40,9 +40,10 @@ public class TreeNode {
           TreeNode node = new TreeNode(1);
           node.left = new TreeNode(2);
           node.right = new TreeNode(3);
-          node.left.left = new TreeNode(4);
-          node.left.right = new TreeNode(5);
-          //node.right.left = new TreeNode(7);
+//          node.left.left = new TreeNode(3);
+//          node.left.right = new TreeNode(4);
+//          node.right.left = new TreeNode(4);
+//          node.right.right = new TreeNode(3);
           return node;
       }
 
