@@ -8,6 +8,8 @@ public class BestTimeToBuy {
         System.out.println("Profit is "+maxProfit(prices));
     }
 
+    // Solved with 2 pointer
+
     public static int maxProfit(int [] prices){
         int profit = 0;
         // handle for array size 0 and 1

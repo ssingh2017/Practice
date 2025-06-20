@@ -37,18 +37,18 @@ public class LengthOfLongestSubstring {
     }
 
     // neetcode solution.
-    public static int lengthOfLongestSubStringUsingSet(String s){
+    public static int lengthOfLongestSubStringUsingSet(String inputString){
         Set<Character> set = new HashSet<>();
-        int start = 0;
-        int size = 0 ;
-        for(int i=0;i<s.length();i++){
-            while(set.contains(s.charAt(i))){
-                set.remove(s.charAt(start));
-                ++start;
+        int startingIndexOfWindow = 0;
+        int maxSizeWithoutRepetition = 0 ;
+        for(int i=0;i<inputString.length();i++){
+            while(set.contains(inputString.charAt(i))){
+                set.remove(inputString.charAt(startingIndexOfWindow));
+                ++startingIndexOfWindow;
             }
-            set.add(s.charAt(i));
-            size = Math.max(size,set.size());
+            set.add(inputString.charAt(i));
+            maxSizeWithoutRepetition = Math.max(maxSizeWithoutRepetition,set.size());
         }
-        return size;
+        return maxSizeWithoutRepetition;
     }
 }
