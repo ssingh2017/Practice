@@ -8,9 +8,9 @@ public class P10_HeightOfBT {
         TreeNode node = TreeNode.getTree();
         TreeNode skewNode  = TreeNode.getSkewTree();
         TreeNode node2 = TreeNode.getTree2();
-        System.out.println("Height of BT "+heightOfBT(node));
-        System.out.println("Height of BT 3 : "+heightOfBT3(node2));
-        System.out.println("Height of BT 2 : "+heightOfBT2(skewNode));
+        System.out.println("Height of BT : "+heightOfBT(node2));
+        System.out.println("Height of BT 3 : "+heightOfBT3(skewNode));
+        System.out.println("Height of BT 2 : "+heightOfBT2(node2));
         System.out.println("Height of BT Using level order : "+heightOfBTUsingLevelOrder(skewNode));
 
     }
@@ -25,7 +25,7 @@ public class P10_HeightOfBT {
 
     public static int heightOfBT2(TreeNode node){
         if(node==null)
-            return -1;
+            return 0;
         int leftCount = heightOfBT2(node.left);
         int rightCount = heightOfBT2(node.right);
         return Math.max(leftCount,rightCount)+1;
@@ -33,7 +33,7 @@ public class P10_HeightOfBT {
 
     public static int heightOfBT3(TreeNode node){
         if (node == null)
-            return -1;
+            return 0;
 
         // compute the height of left and right subtrees
         int lHeight = heightOfBT3(node.left);
@@ -45,9 +45,10 @@ public class P10_HeightOfBT {
 
     // Solving using level order traversal.
     public static int heightOfBTUsingLevelOrder(TreeNode node){
+        int count = 0;
         if(node==null)
             return 0;
-        int count = 0;
+        count++;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(node);
         queue.add(null);
