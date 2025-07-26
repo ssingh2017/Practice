@@ -1,4 +1,4 @@
-package org.dynamicProgramming.questions;
+package org.dynamicProgramming.questions.knapsack01;
 
 public class CountOfSubset {
     static int[][] t;

@@ -1,4 +1,4 @@
-package org.dynamicProgramming.questions;
+package org.dynamicProgramming.questions.knapsack01;
 
 // is it possible to get equal sum partition from the array.
 
