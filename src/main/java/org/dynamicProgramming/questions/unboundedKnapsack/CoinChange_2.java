@@ -3,8 +3,8 @@ package org.dynamicProgramming.questions.unboundedKnapsack;
 public class CoinChange_2 {
     static int[][] t;
     public static void main(String[] args) {
-        int[] coins ={25,10,5};
-        int v =30;
+        int[] coins ={2,5,10,1};
+        int v =27;
         t = new int[coins.length+1][v+1];
         System.out.println("Minimum coins required "+coinChange(coins,v,coins.length));
     }
@@ -33,7 +33,8 @@ public class CoinChange_2 {
                     t[i][j] = t[i-1][j];
             }
         }
-
+        if(t[n][v] == Integer.MAX_VALUE-1)
+            return -1;
         return t[n][v];
     }
 }
